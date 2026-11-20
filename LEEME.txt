@@ -1,0 +1,40 @@
+APP PIZZERÍA · Elasticidad + Demanda + Inventario (MPD · Grupo 2)
+=================================================================
+
+CONTENIDO
+  app.py                  -> la aplicación
+  requirements.txt        -> librerías que instala Streamlit Cloud
+  .streamlit/config.toml  -> colores del tema
+
+LA APP NO TRAE DATOS. Al abrirla muestra solo el botón para cargar el CSV
+(panel lateral, "Cargar CSV de ventas"). Todo aparece después de cargar
+pizza_sales_ordenado.csv (separador ; o , · fechas día/mes/año).
+
+-----------------------------------------------------------------
+A) PUBLICAR EN LA PÁGINA (Streamlit Cloud)
+-----------------------------------------------------------------
+1. Entrar al repositorio en GitHub (cuenta 20232618-glitch).
+2. Add file -> Upload files -> arrastrar app.py, requirements.txt y la
+   carpeta .streamlit -> Commit changes.
+   (El CSV que esté en el repositorio ya no se usa; pueden borrarlo.)
+3. Esperar 1-2 minutos y recargar. Si no cambia: menú ⋮ -> Reboot app.
+
+   App nueva: share.streamlit.io -> Create app -> repositorio, rama main,
+   archivo principal app.py -> Deploy.
+
+-----------------------------------------------------------------
+B) CORRER EN LA COMPUTADORA (Windows)
+-----------------------------------------------------------------
+1. Python 3.10 o superior (python.org, marcar "Add to PATH").
+2. En la carpeta app_pizzeria escribir cmd en la barra de direcciones.
+3.   pip install -r requirements.txt
+     streamlit run app.py
+4. Se abre en http://localhost:8501 -> cargar el CSV en el panel lateral.
+
+-----------------------------------------------------------------
+PARA LA PRESENTACIÓN
+-----------------------------------------------------------------
+- Desactivar el traductor de Chrome (mezcla comas y puntos).
+- Panel integrado -> "Mapa de dependencias" muestra qué mueve cada parámetro.
+- Demostración sugerida: subir el precio +10 %, luego bajar el nivel de
+  servicio a 90 % y subir H: cambian servicio, ingreso, margen y precio óptimo.
